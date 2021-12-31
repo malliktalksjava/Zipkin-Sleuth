@@ -32,7 +32,7 @@ class Service1Controller{
 	public AlwaysSampler alwaysSampler() {
 		return new AlwaysSampler();
 	}
-	private static final Logger LOG = Logger.getLogger(ZipkinController.class.getName());
+	private static final Logger LOG = Logger.getLogger(Service1Controller.class.getName());
 	
 	@GetMapping(value="/service1")
 	public String service1() {

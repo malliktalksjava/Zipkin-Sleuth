@@ -21,7 +21,7 @@ public class Service3Application {
 }
 
 @RestController
-class Service1Controller{
+class Service3Controller{
 	
 	@Autowired
 	RestTemplate restTemplate;
@@ -32,7 +32,7 @@ class Service1Controller{
 	public AlwaysSampler alwaysSampler() {
 		return new AlwaysSampler();
 	}
-	private static final Logger LOG = Logger.getLogger(ZipkinController.class.getName());
+	private static final Logger LOG = Logger.getLogger(Service3Controller.class.getName());
 	
 	@GetMapping(value="/service3")
 	public String service1() {

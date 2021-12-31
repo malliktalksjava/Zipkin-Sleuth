@@ -32,7 +32,7 @@ class Service2Controller{
 	public AlwaysSampler alwaysSampler() {
 		return new AlwaysSampler();
 	}
-	private static final Logger LOG = Logger.getLogger(ZipkinController.class.getName());
+	private static final Logger LOG = Logger.getLogger(Service2Controller.class.getName());
 	
 	@GetMapping(value="/service2")
 	public String service1() {
@@ -47,7 +47,7 @@ class Service2Controller{
 		}
 		LOG.info("returning afte delay..");
 		
-		 String response = (String) restTemplate.exchange("http://localhost:8082/service3", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
+		 String response = (String) restTemplate.exchange("http://localhost:8083/service3", HttpMethod.GET, null, new ParameterizedTypeReference<String>() {
 	        }).getBody();
 		return response;
 	}
